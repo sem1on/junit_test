@@ -36,7 +36,7 @@ public class SimpleWebTest {
     delimiter = '|')
     @ParameterizedTest(name = "В первом результате для {0} текст {1}")
     @Blocker
-    void FirstSearchResultItems(String testData, String expecktResult) {
+    void firstSearchResultItems(String testData, String expecktResult) {
         $("#text").setValue(testData);
         $("button[type='submit']").click();
         $$("li.serp-item").first().shouldHave(text(expecktResult));
